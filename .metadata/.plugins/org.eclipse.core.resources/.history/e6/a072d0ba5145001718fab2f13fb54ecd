@@ -1,0 +1,15 @@
+
+public class method3 {
+
+	public float substraction(){
+		
+		float a=(float) 12.5;
+		float b=(float) 9.3;
+		float c=a-b;
+		
+     	System.out.println(c);
+		return c;
+		
+
+	}
+}

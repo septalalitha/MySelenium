@@ -1,0 +1,36 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class calender_increment {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+        System.setProperty("webdriver.gecko.driver ","geckodriver");
+		
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.goibibo.com/");
+		driver.findElement(By.xpath("//input[@placeholder='Choose Date']")).click();
+		driver.findElement(By.id("fare_20170628")).click();
+		driver.findElement(By.id("pax_label")).click();
+		int i=1;
+		
+		while(i<5)
+			
+		{
+		driver.findElement(By.id("adultPaxPlus")).click();
+		i++;
+				
+		}
+		
+		Thread.sleep(4000L);
+		
+		while(i>1)
+		{
+		driver.findElement(By.id("adultPaxMinus")).click();
+		i--;
+		}
+		}
+
+	}
+

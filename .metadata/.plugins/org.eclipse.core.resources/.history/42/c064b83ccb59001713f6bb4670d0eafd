@@ -1,0 +1,55 @@
+
+public class Inheritance {
+
+	public static void main(String args[]) {
+		Vehicle v1 = new Vehicle();
+		Vehicle.wheels = "four";
+		
+		v1.color = "red";		
+		System.out.println("Color : " + v1.color);
+		System.out.println("Wheels : " + v1.wheels);
+		
+		Vehicle v2 = new Vehicle();
+		v2.color = "green";
+		System.out.println("Color : " + v2.color);
+		System.out.println("Wheels : " + v1.wheels);
+	   }	
+}
+
+
+//A class to display the attributes of the vehicle
+class Vehicle {
+	static String wheels;
+	String color;
+	int speed;
+	int size;
+	void attributes() {
+		System.out.println("Color : " + color);
+		System.out.println("Color : " + color); 
+		System.out.println("Speed : " + speed);
+		System.out.println("Size : " + size);
+		}
+}
+
+
+
+
+
+
+
+
+
+
+//A subclass which extends for vehicle
+class Car extends Vehicle {
+int CC;
+int gears;
+void attributescar() {
+   // The subclass refers to the members of the superclass
+   System.out.println("Color of Car : " + color);
+   System.out.println("Speed of Car : " + speed);
+   System.out.println("Size of Car : " + size);
+   System.out.println("CC of Car : " + CC);
+   System.out.println("No of gears of Car : " + gears);
+}
+}

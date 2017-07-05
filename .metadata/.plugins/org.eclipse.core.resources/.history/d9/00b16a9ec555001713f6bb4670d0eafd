@@ -1,0 +1,27 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class table {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		 System.setProperty("webdriver.gecko.driver ","geckodriver");
+			
+		WebDriver driver=new FirefoxDriver();
+		driver.get("http://www.espncricinfo.com/ci/engine/match/1068504.html");
+		WebElement table=driver.findElement(By.xpath("//table[@class='batting-table innings']"));
+		
+		//finding rows in the table
+		int rows;
+		rows=table.findElements(By.tagName("tr")).size();
+		System.out.println("no of rows" + rows);
+		
+		
+		
+
+	}
+
+}

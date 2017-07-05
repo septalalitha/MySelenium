@@ -1,0 +1,19 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Synchronization {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 System.setProperty("webdriver.gecko.driver ","geckodriver");
+			
+			WebDriver driver=new FirefoxDriver();
+			driver.get("https://www.goibibo.com/");
+			driver.findElement(By.className("icon-hotels db blue ico28 lh1-2 padT2 padB3")).click();
+			driver.findElement(By.id("gosuggest_inputL")).sendKeys("Delhi");
+			driver.findElement(By.xpath("//input[@aria-activedescendant='react-autosuggest-1-suggestion--0']")).click();
+            driver.findElement(By.id("hm_srch_srp")).click();
+	}
+
+}

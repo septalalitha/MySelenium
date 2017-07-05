@@ -1,0 +1,24 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class pracexercise {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        System.setProperty("webdriver.chrome.driver","chromedriver");
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://www.ebay.com/");
+		//count of the links in the webpage
+		System.out.println(driver.findElements(By.tagName("a")).size());
+		//links in the footor section of the webpage
+		WebElement footer= driver.findElement(By.id("glbfooter"));
+		System.out.println(footer.findElements(By.tagName("a")).size());
+		
+
+	}
+
+}
